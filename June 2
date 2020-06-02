@@ -1,0 +1,17 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    void deleteNode(ListNode* node) {
+        node->val=node->next->val;    //the idea is to copy the val of the next element and then delete or skip over the  
+        node->next=node->next->next;  //the next node
+        
+    }
+};
+//ps it had a very good running time.
